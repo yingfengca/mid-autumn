@@ -16,7 +16,7 @@
         }
 
         body {
-            background-image: linear-gradient(rgb(54, 8, 92), rgb(20, 56, 214));
+            background-image: linear-gradient(rgb(57, 1, 102), rgb(20, 56, 214));
             height: 100vh
         }
 
@@ -57,9 +57,10 @@
         }
 
         #celebrate {
-            width: 15vh;
-            text-align: center;
-            line-height: 20vh;
+            width: 30vh;
+            text-align:right;
+            line-height: 15vh;
+            letter-spacing: 5vh;
 
             position: absolute;
             top: 50%;
@@ -67,36 +68,45 @@
             transform: translate(-50%, -50%);
             color: #fff;
             font-family: 'ZCOOL QingKe HuangYou', cursive;
-            font-size: 15vh;
+            font-size: 10vh;
             text-shadow: 0 0 20px white;
 
         }
-
-        #poem_left {
+        #poem div{
             position: absolute;
-            top: 45%;
-            left: 70%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%,-50%);
             color: #fff;
             font-family: 'ZCOOL KuaiLe', cursive;
             font-size: 5vh;
-            text-shadow: 0 0 30px white;
             width: 5vh;
+            text-align: center;
             line-height: 7vh;
-
+            overflow: hidden;
+        
+        }
+        #poem_left {          
+            top: 50%;
+            left: 70%;
+            animation: typing 3s steps(5, end);
         }
 
         #poem_right {
-            position: absolute;
-            top: 55%;
+            visibility: hidden;
+            top: 50%;
             left: 80%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-family: 'ZCOOL KuaiLe', cursive;
-            font-size: 5vh;
-            text-shadow: 0 0 30px white;
-            width: 5vh;
-            line-height: 7vh;
+            animation: typing 3s steps(5, end) 3s forwards;
+        }
+
+        @keyframes typing {
+            from {
+                visibility:visible;
+                height: 0vh;
+            }
+
+            to {
+                visibility:visible;
+                height: 35vh;
+            }
         }
     </style>
 </head>
@@ -108,9 +118,9 @@
         </div>
 
         <div id="celebrate">
-            中秋
+            中秋团圆
         </div>
-        <div id="peom">
+        <div id="poem">
             <div id="poem_left">但愿人长久</div>
             <div id="poem_right">千里共婵娟</div>
         </div>
