@@ -30,9 +30,20 @@
             left: 30%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            animation: shinning 3s linear infinite alternate-reverse;
+            animation: shinning 3s linear infinite alternate-reverse,
+            20s cubic-bezier(0.230, 1.000, 0.320, 1.000) slidein;
 
         }
+        #fullmoon {
+            width: 100%;
+            height: 100%;
+            background-image: url(fullmoon.png);
+            background-size: cover;
+            border-radius: 50%;
+            opacity: 0.35;
+            filter: blur(2px);
+        }
+
 
         @keyframes shinning {
             from {
@@ -44,17 +55,6 @@
             }
 
         }
-
-        #fullmoon {
-            width: 100%;
-            height: 100%;
-            background-image: url(fullmoon.png);
-            background-size: cover;
-            border-radius: 50%;
-            opacity: 0.35;
-            filter: blur(2px);
-        }
-
 
         #celebrate {
             width: 15vh;
@@ -83,6 +83,7 @@
             text-shadow: 0 0 30px white;
             width: 5vh;
             line-height: 7vh;
+
         }
 
         #poem_right {
@@ -97,29 +98,6 @@
             width: 5vh;
             line-height: 7vh;
         }
-
-        .star {
-            width: 3px;
-            height: 3px;
-            background-color: #fff;
-            border-radius: 50%;
-            box-shadow: 0 0 3px 3px white;
-
-            position: absolute;
-            top: 20%;
-            left: 70%;
-            animation: twinkle 1s linear infinite alternate-reverse;
-        }
-
-        @keyframes twinkle {
-            from {
-                box-shadow: 0 0 3px 3px white;
-            }
-
-            to {
-                box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
-            }
-        }
     </style>
 </head>
 
@@ -128,7 +106,7 @@
         <div id="moon">
             <div id="fullmoon"></div>
         </div>
-        
+
         <div id="celebrate">
             中秋
         </div>
